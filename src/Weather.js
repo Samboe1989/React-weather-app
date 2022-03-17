@@ -15,6 +15,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
+      weatherCondition: response.data.weather[0].main,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -146,7 +147,7 @@ export default function Weather(props) {
               <h2>Cloudy</h2>
               <ul>
                 <li>Humidity: 90%{weather.humidity}%</li>
-                <li>Wind: 5km/h</li>
+                <li>Wind: 7km/h</li>
               </ul>
             </div>
           </div>
