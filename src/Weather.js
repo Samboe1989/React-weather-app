@@ -10,12 +10,15 @@ export default function Weather(props) {
 
   function displayWeather(response) {
     setLoaded(true);
+
     setWeather({
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       weatherCondition: response.data.weather[0].main,
+      tempMin: response.data.main.temp_min,
+      tempMax: response.data.main.temp_max,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -54,7 +57,7 @@ export default function Weather(props) {
           </div>
         </form>
         <div className="row">
-          <div className="col-7">
+          <div className="col-sm-7">
             <div className="overview">
               <h1>{city}</h1>
               <ul>
@@ -62,7 +65,7 @@ export default function Weather(props) {
               </ul>
             </div>
           </div>
-          <div className="col-5">
+          <div className="col-sm-5">
             <div className="actual-temperature">
               <strong>{Math.round(weather.temperature)}</strong>
               <span className="units">
@@ -72,7 +75,7 @@ export default function Weather(props) {
           </div>
         </div>
         <div className="row">
-          <div className="col-7">
+          <div className="col-sm-7">
             <div className="weather-description">
               <img
                 src={weather.icon}
@@ -81,12 +84,14 @@ export default function Weather(props) {
               />
             </div>
           </div>
-          <div className="col-5">
+          <div className="col-sm-5">
             <div className="wind-humidity">
               <h2>{weather.description}</h2>
               <ul>
                 <li>Humidity:{weather.humidity}%</li>
                 <li>Wind: {Math.round(weather.wind)} km/h</li>
+                <li>Min temp:{Math.round(weather.tempMin)}°C</li>
+                <li>Max temp:{Math.round(weather.tempMax)}°C</li>
               </ul>
             </div>
           </div>
@@ -98,7 +103,7 @@ export default function Weather(props) {
       <div className="Weather">
         <form onSubmit={handleSubmit} className="mb-3 navigation">
           <div className="row">
-            <div className="col-9">
+            <div className="col-sm-9">
               <input
                 onChange={updateCity}
                 type="search"
@@ -107,7 +112,7 @@ export default function Weather(props) {
                 className="city-input"
               />
             </div>
-            <div className="col-3">
+            <div className="col-sm-3">
               <button type="submit" className="seach-button">
                 Search
               </button>
@@ -115,7 +120,7 @@ export default function Weather(props) {
           </div>
         </form>
         <div className="row">
-          <div className="col-7">
+          <div className="col-sm-7">
             <div className="overview">
               <h1>Barcelona</h1>
               <ul>
@@ -123,7 +128,7 @@ export default function Weather(props) {
               </ul>
             </div>
           </div>
-          <div className="col-5">
+          <div className="col-sm-5">
             <div className="actual-temperature">
               <strong>16</strong>
               <span className="units">
@@ -133,7 +138,7 @@ export default function Weather(props) {
           </div>
         </div>
         <div className="row">
-          <div className="col-7">
+          <div className="col-sm-7">
             <div className="weather-description">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/128/original/cloud.png?1645860303"
@@ -142,12 +147,13 @@ export default function Weather(props) {
               />
             </div>
           </div>
-          <div className="col-5">
+          <div className="col-sm-5">
             <div className="wind-humidity">
               <h2>Cloudy</h2>
               <ul>
-                <li>Humidity: 90%{weather.humidity}%</li>
+                <li>Humidity: 90%%</li>
                 <li>Wind: 7km/h</li>
+                <li></li>
               </ul>
             </div>
           </div>
