@@ -102,7 +102,7 @@ export default function Weather(props) {
           This project was coded by Samantha Boersma and is
           <a
             class="bottomlink"
-            href="https://github.com/Samboe1989/SheCodes-responsive-final-project"
+            href="https://github.com/Samboe1989/React-weather-app"
             target="_blank"
             title="Github page"
           >
@@ -178,7 +178,7 @@ export default function Weather(props) {
           This project was coded by Samantha Boersma and is
           <a
             class="bottomlink"
-            href="https://github.com/Samboe1989/SheCodes-responsive-final-project"
+            href="https://github.com/Samboe1989/React-weather-app"
             target="_blank"
             title="Github page"
           >
