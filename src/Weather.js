@@ -153,7 +153,8 @@ export default function Weather(props) {
               <ul>
                 <li>Humidity: 90%%</li>
                 <li>Wind: 7km/h</li>
-                <li></li>
+                <li>Min temp:9°C</li>
+                <li>Max temp:11°C</li>
               </ul>
             </div>
           </div>
