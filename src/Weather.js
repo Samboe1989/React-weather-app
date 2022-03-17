@@ -104,6 +104,7 @@ export default function Weather(props) {
             class="bottomlink"
             href="https://github.com/Samboe1989/React-weather-app"
             target="_blank"
+            rel="noreferrer"
             title="Github page"
           >
             {""} open-Sourced on GitHub
@@ -180,6 +181,7 @@ export default function Weather(props) {
             class="bottomlink"
             href="https://github.com/Samboe1989/React-weather-app"
             target="_blank"
+            rel="noreferrer"
             title="Github page"
           >
             {""} open-Sourced on GitHub
