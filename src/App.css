@@ -1,38 +1,130 @@
+:root {
+  --primary-color: black;
+  --secondary-color: #7f867b;
+}
+
+body {
+  font-family: "PT Mono", monospace;
+}
+
+h1 {
+  color: black;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--secondary-color);
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/*Containers*/
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Weather {
+  padding: 30px 30px 0px 30px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
 .App {
-  text-align: center;
+  max-width: 600px;
+  margin: 30px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Navigation*/
+
+.city-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--secondary-color);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.seach-button {
+  background-color: #c7c7bb;
+  padding: 10px 15px;
+  border-radius: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.seach-button:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
-.App-link {
-  color: #61dafb;
+/*City and Time*/
+
+.overview {
+  padding: 50px 0px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Actual Temperature*/
+
+.actual-temperature strong {
+  font-size: 90px;
+  padding-left: 5px;
+}
+
+.actual-temperature {
+  padding: 10px 10px;
+}
+
+.units {
+  position: relative;
+  font-size: 12px;
+  bottom: 10px;
+  left: 10px;
+  color: var(--secondary-color);
+}
+
+.units a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/*Weather Description*/
+
+.weather-img {
+  padding-bottom: 10px;
+  float: left;
+  width: 200px;
+  height: auto;
+}
+
+.wind-humidity {
+  padding: 30px 0px 0px 0px;
+  margin: 10px;
+  color: var(--secondary-color);
 }
