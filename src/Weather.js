@@ -1,24 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+
 import "./App.css";
 
-export default function Weather() {
-  let weatherData = {
-    city: "Barcelona",
-    temperature: 17,
-    date: "Friday 19:32",
-    description: "Cloudy",
-    imgUrl:
-      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/128/original/cloud.png?1645860303",
-    humidity: 90,
-    wind: 8,
-    precipitation: 0,
-  };
-  return (
+export default function Weather(props) {
+  const [city, setCity] = useState("");
+  const [loaded, setLoaded] = useState(false);
+  const [weather, setWeather] = useState({});
+
+  function displayWeather(response) {
+    setLoaded(true);
+    setWeather({
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    let apiKey = "6d9d93b7d32e34850e611e89547fc660";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeather);
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
+  let form = (
     <div className="Weather">
-      <form className="mb-3 navigation">
+      <form onSubmit={handleSubmit} className="mb-3 navigation">
         <div className="row">
           <div className="col-9">
             <input
+              onChange={updateCity}
               type="search"
               placeholder="Type a city.."
               autoComplete="off"
@@ -26,23 +45,24 @@ export default function Weather() {
             />
           </div>
           <div className="col-3">
-            <input type="submit" value="Search" className="seach-button" />
+            <button type="submit" className="seach-button">
+              Search
+            </button>
           </div>
         </div>
       </form>
-
       <div className="row">
         <div className="col-7">
           <div className="overview">
-            <h1>{weatherData.city}</h1>
+            <h1>{props.city}</h1>
             <ul>
-              <li>Last updated: {weatherData.date}</li>
+              <li>Last updated: Friday 19:32</li>
             </ul>
           </div>
         </div>
         <div className="col-5">
           <div className="actual-temperature">
-            <strong>{weatherData.temperature}</strong>
+            <strong>{weather.temperature} °C </strong>
             <span className="units">
               <a href="/">°C</a>|<a href="/">°F</a>
             </span>
@@ -53,20 +73,82 @@ export default function Weather() {
         <div className="col-7">
           <div className="weather-description">
             <img
-              src={weatherData.imgUrl}
-              alt={weatherData.description}
+              src={weather.icon}
+              alt={weather.description}
               className="weather-img"
             />
           </div>
         </div>
         <div className="col-5">
           <div className="wind-humidity">
-            <h2>{weatherData.description}</h2>
+            <h2>{weather.description}</h2>
             <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind} km/h</li>
-              <li>Precipitation: {weatherData.precipitation}%</li>
+              <li>{weather.humidity}%</li>
+              <li>Wind: {weather.wind} km/h</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div>
+      <div className="Weather">
+        <form onSubmit={handleSubmit} className="mb-3 navigation">
+          <div className="row">
+            <div className="col-9">
+              <input
+                onChange={updateCity}
+                type="search"
+                placeholder="Type a city.."
+                autoComplete="off"
+                className="city-input"
+              />
+            </div>
+            <div className="col-3">
+              <button type="submit" className="seach-button">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <div className="row">
+          <div className="col-7">
+            <div className="overview">
+              <h1>{city}</h1>
+              <ul>
+                <li>Last updated: Friday 19:32</li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-5">
+            <div className="actual-temperature">
+              <strong>{Math.round(weather.temperature)}</strong>
+              <span className="units">
+                <a href="/">°C</a>|<a href="/">°F</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-7">
+            <div className="weather-description">
+              <img
+                src={weather.icon}
+                alt={weather.description}
+                className="weather-img"
+              />
+            </div>
+          </div>
+          <div className="col-5">
+            <div className="wind-humidity">
+              <h2>{weather.description}</h2>
+              <ul>
+                <li>Humidity:{weather.humidity}%</li>
+                <li>Wind: {weather.wind} km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
