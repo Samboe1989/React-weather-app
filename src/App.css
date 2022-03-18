@@ -190,10 +190,10 @@ footer {
   }
 
   .city-input {
-    width: 250px;
+    width: 300px;
     position: relative;
     left: 0px;
-    padding: 5px;
+    padding: 10px;
     display: block;
     margin: 0 auto;
     font-size: 14px;
