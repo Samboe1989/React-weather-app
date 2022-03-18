@@ -53,8 +53,13 @@ li {
 }
 
 .App {
-  max-width: 600px;
+  max-width: 700px;
   margin: 30px auto;
+}
+
+.col-sm-5,
+.col-sm-7 {
+  padding: 0px;
 }
 
 /*Navigation*/
@@ -69,6 +74,7 @@ li {
   background-clip: padding-box;
   border: 1px solid var(--secondary-color);
   border-radius: 3px;
+  margin: 0px;
 }
 
 .seach-button {
@@ -83,10 +89,18 @@ li {
   transition: all 0.5s ease;
 }
 
+.searchField {
+  padding: 0px;
+}
+
+.searchButton {
+  padding: 0px 0px 0px 5px;
+}
+
 /*City and Time*/
 
 .overview {
-  padding: 50px 0px 0px;
+  padding: 50px 0px 0px 10px;
 }
 
 /*Actual Temperature*/
@@ -97,7 +111,7 @@ li {
 }
 
 .actual-temperature {
-  padding: 10px 10px;
+  padding: 10px 0px 0px 0px;
 }
 
 .units {
@@ -125,7 +139,7 @@ li {
 }
 
 .wind-humidity {
-  padding: 30px 0px 0px 0px;
+  padding: 30px 0px 10px 0px;
   margin: 10px;
   color: var(--secondary-color);
 }
@@ -148,4 +162,30 @@ footer {
   margin: 10px;
   font-size: 12px;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .overview {
+    padding: 10px 0px;
+  }
+
+  .searchButton {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .col-sm-5,
+  .col-sm-7 {
+    padding: 0px;
+  }
+
+  .weather-img {
+    width: 100px;
+    height: auto;
+    padding: 0px;
+  }
+
+  .wind-humidity {
+    padding: 0px 0px 5px 0px;
+  }
 }
