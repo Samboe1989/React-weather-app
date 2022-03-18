@@ -166,8 +166,8 @@ export default function Weather(props) {
               <div className="wind-humidity">
                 <h2>Cloudy</h2>
                 <ul>
-                  <li>Humidity: 90%%</li>
-                  <li>Wind: 7km/h</li>
+                  <li>Humidity:90%</li>
+                  <li>Wind:7km/h</li>
                   <li>Min temp:9°C</li>
                   <li>Max temp:11°C</li>
                 </ul>
