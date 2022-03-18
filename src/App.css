@@ -1,10 +1,12 @@
 :root {
   --primary-color: black;
-  --secondary-color: #7f867b;
+  --secondary-color: #b5b4b2;
 }
 
 body {
   font-family: "PT Mono", monospace;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/029/538/original/89-893223_white-wall-with-plants-script-font.jpg?1647628096");
+  background-size: cover;
 }
 
 h1 {
@@ -47,14 +49,15 @@ li {
 }
 
 .Weather {
-  padding: 30px 20px 0px 20px;
+  padding: 30px 0px 0px 30px;
   border: 1px solid var(--primary-color);
   border-radius: 5px;
   margin: 20px;
+  background-color: #fff;
 }
 
 .App {
-  max-width: 650px;
+  max-width: 800px;
   margin: 30px auto;
 }
 
@@ -67,7 +70,7 @@ li {
 
 .city-input {
   display: block;
-  width: 100%;
+  width: 540px;
   padding: 10px;
   font-size: 18px;
   color: var(--secondary-color);
@@ -76,13 +79,15 @@ li {
   border: 1px solid var(--secondary-color);
   border-radius: 3px;
   margin: 0px 10px;
+  position: relative;
+  left: 30px;
 }
 
 .seach-button {
-  background-color: #c7c7bb;
+  background-color: var(--secondary-color);
   padding: 10px 15px;
   border-radius: 3px;
-  margin: 0px 10px;
+  margin: 0px 20px;
 }
 
 .seach-button:hover {
@@ -103,6 +108,8 @@ li {
 
 .overview {
   padding: 50px 0px 0px 10px;
+  position: relative;
+  left: 30px;
 }
 
 /*Actual Temperature*/
@@ -110,6 +117,8 @@ li {
 .actual-temperature strong {
   font-size: 90px;
   padding-left: 5px;
+  position: relative;
+  left: 40px;
 }
 
 .actual-temperature {
@@ -120,7 +129,7 @@ li {
   position: relative;
   font-size: 12px;
   bottom: 10px;
-  left: 10px;
+  left: 50px;
   color: var(--secondary-color);
 }
 
@@ -138,12 +147,15 @@ li {
   bottom: 5px;
   width: 200px;
   height: auto;
+  left: 30px;
 }
 
 .wind-humidity {
   padding: 30px 0px 10px 0px;
   margin: 10px;
   color: var(--secondary-color);
+  position: relative;
+  left: 40px;
 }
 
 .bottomlink {
@@ -173,10 +185,16 @@ footer {
   }
 
   .overview,
-  .actual-temperature,
   .weather-description,
   .wind-humidity {
     text-align: center;
+    position: relative;
+    left: 0px;
+  }
+
+  .actual-temperature {
+    position: relative;
+    left: 0px;
   }
 
   .searchButton {
