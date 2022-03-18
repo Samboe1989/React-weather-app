@@ -184,6 +184,10 @@ footer {
     text-align: center;
   }
 
+  .city-input {
+    margin: 0px;
+  }
+
   .actual-temperature,
   .col-sm-5,
   .col-sm-7 {
