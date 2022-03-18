@@ -1,6 +1,7 @@
 :root {
   --primary-color: black;
-  --secondary-color: #b5b4b2;
+  --secondary-color: #dad9d7;
+  --li-color: #4e5e43;
 }
 
 body {
@@ -34,7 +35,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: var(--secondary-color);
+  color: var(--li-color);
   font-size: 16px;
   line-height: 19px;
 }
@@ -154,7 +155,7 @@ li {
 .wind-humidity {
   padding: 30px 0px 10px 0px;
   margin: 10px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   position: relative;
   left: 20px;
 }
@@ -164,7 +165,7 @@ li {
   justify-content: space-evenly;
   text-decoration: none;
   color: #7f867b;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .bottomlink:hover {
@@ -175,7 +176,7 @@ li {
 
 footer {
   margin: 10px;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
 }
 
