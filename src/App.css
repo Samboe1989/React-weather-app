@@ -118,7 +118,6 @@ li {
 
 .actual-temperature strong {
   font-size: 90px;
-  padding-left: 5px;
   position: relative;
   left: 20px;
 }
@@ -181,30 +180,8 @@ footer {
 }
 
 @media (max-width: 576px) {
-  .overview {
-    padding: 10px 10px;
+  .weather-description img {
     text-align: center;
-  }
-
-  .overview {
-    text-align: center;
-    position: relative;
-    left: 0px;
-  }
-
-  .actual-temperature {
-    position: relative;
-    left: 40px;
-  }
-
-  .weather-description {
-    position: relative;
-    left: 40px;
-  }
-
-  .wind-humidity {
-    position: relative;
-    left: 60px;
   }
 
   .searchButton {
@@ -213,26 +190,53 @@ footer {
   }
 
   .city-input {
-    margin: 0px;
-    width: 100%;
+    width: 250px;
     position: relative;
     left: 0px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
   }
 
-  .actual-temperature,
+  .seach-button {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+
   .col-sm-5,
   .col-sm-7 {
     padding: 0px;
+  }
+
+  .overview {
+    padding: 10px 15px;
+    position: relative;
+    left: 0px;
   }
 
   .weather-img {
     width: 100px;
     height: auto;
     padding: 0px;
+    position: relative;
+    left: 0px;
   }
 
   .Weather {
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
+    text-align: center;
+  }
+
+  .wind-humidity {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: 0px;
+  }
+
+  .actual-temperature strong {
+    padding-left: 0px;
   }
 }
