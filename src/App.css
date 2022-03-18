@@ -133,7 +133,7 @@ li {
 /*Weather Description*/
 
 .weather-img {
-  padding-bottom: 10px;
+  padding: 10px 0px 0px 10px;
   position: relative;
   bottom: 5px;
   width: 200px;
