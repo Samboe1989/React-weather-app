@@ -168,6 +168,14 @@ footer {
 @media (max-width: 576px) {
   .overview {
     padding: 10px 10px;
+    text-align: center;
+  }
+
+  .overview,
+  .actual-temperature,
+  .weather-description,
+  .wind-humidity {
+    text-align: center;
   }
 
   .searchButton {
