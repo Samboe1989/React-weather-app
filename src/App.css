@@ -7,6 +7,7 @@ body {
   font-family: "PT Mono", monospace;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/029/538/original/89-893223_white-wall-with-plants-script-font.jpg?1647628096");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
