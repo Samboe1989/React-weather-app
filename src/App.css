@@ -193,7 +193,7 @@ footer {
 
   .actual-temperature {
     position: relative;
-    left: 20px;
+    left: 40px;
   }
 
   .weather-description {
@@ -203,7 +203,7 @@ footer {
 
   .wind-humidity {
     position: relative;
-    left: 50px;
+    left: 60px;
   }
 
   .searchButton {
