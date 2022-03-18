@@ -204,6 +204,9 @@ footer {
 
   .city-input {
     margin: 0px;
+    width: 100%;
+    position: relative;
+    left: 0px;
   }
 
   .actual-temperature,
