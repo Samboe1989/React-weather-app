@@ -184,9 +184,7 @@ footer {
     text-align: center;
   }
 
-  .overview,
-  .weather-description,
-  .wind-humidity {
+  .overview {
     text-align: center;
     position: relative;
     left: 0px;
@@ -194,7 +192,17 @@ footer {
 
   .actual-temperature {
     position: relative;
-    left: 0px;
+    left: 20px;
+  }
+
+  .weather-description {
+    position: relative;
+    left: 40px;
+  }
+
+  .wind-humidity {
+    position: relative;
+    left: 50px;
   }
 
   .searchButton {
