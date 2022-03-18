@@ -118,7 +118,7 @@ li {
   font-size: 90px;
   padding-left: 5px;
   position: relative;
-  left: 40px;
+  left: 20px;
 }
 
 .actual-temperature {
@@ -129,7 +129,7 @@ li {
   position: relative;
   font-size: 12px;
   bottom: 10px;
-  left: 50px;
+  left: 40px;
   color: var(--secondary-color);
 }
 
@@ -155,7 +155,7 @@ li {
   margin: 10px;
   color: var(--secondary-color);
   position: relative;
-  left: 40px;
+  left: 20px;
 }
 
 .bottomlink {
