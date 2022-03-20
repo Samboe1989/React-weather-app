@@ -1,6 +1,6 @@
 :root {
   --primary-color: black;
-  --secondary-color: #dad9d7;
+  --secondary-color: #bbb9b8;
   --li-color: #4e5e43;
 }
 
@@ -89,21 +89,17 @@ li {
   background-color: var(--secondary-color);
   padding: 10px 15px;
   border-radius: 3px;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 .seach-button:hover {
-  color: var(--primary-color);
+  background-color: #d5d3d1;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .searchField {
   padding: 0px;
-}
-
-.searchButton {
-  padding: 0px 0px 0px 5px;
 }
 
 /*City and Time*/
@@ -111,7 +107,7 @@ li {
 .overview {
   padding: 50px 0px 0px 10px;
   position: relative;
-  left: 30px;
+  left: 60px;
 }
 
 /*Actual Temperature*/
@@ -141,6 +137,11 @@ li {
 }
 
 /*Weather Description*/
+
+.weather-description {
+  position: relative;
+  left: 35px;
+}
 
 .weather-img {
   padding: 10px 0px 0px 10px;
