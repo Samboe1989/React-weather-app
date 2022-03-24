@@ -98,18 +98,6 @@ export default function Weather(props) {
             </div>
           </div>
         </div>
-        <footer>
-          This project was coded by Samantha Boersma and is
-          <a
-            class="bottomlink"
-            href="https://github.com/Samboe1989/React-weather-app"
-            target="_blank"
-            rel="noreferrer"
-            title="Github page"
-          >
-            {""} open-Sourced on GitHub
-          </a>
-        </footer>
       </div>
     );
   } else {
@@ -175,18 +163,6 @@ export default function Weather(props) {
             </div>
           </div>
         </div>
-        <footer>
-          This project was coded by Samantha Boersma and is
-          <a
-            class="bottomlink"
-            href="https://github.com/Samboe1989/React-weather-app"
-            target="_blank"
-            rel="noreferrer"
-            title="Github page"
-          >
-            {""} open-Sourced on GitHub
-          </a>
-        </footer>
       </div>
     );
   }
