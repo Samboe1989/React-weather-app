@@ -188,6 +188,7 @@ li {
 
   .city-input {
     width: auto;
+    height: 20px;
     position: relative;
     left: 0px;
     padding: 20px;
