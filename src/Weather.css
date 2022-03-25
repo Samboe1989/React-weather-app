@@ -1,0 +1,242 @@
+:root {
+  --primary-color: black;
+  --secondary-color: #bbb9b8;
+  --li-color: #4e5e43;
+}
+
+body {
+  font-family: "PT Mono", monospace;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/029/538/original/89-893223_white-wall-with-plants-script-font.jpg?1647628096");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: black;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--li-color);
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/*Containers*/
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Weather {
+  padding: 30px 0px 0px 30px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  margin: 60px 0px 0px 0px;
+  background-color: #fff;
+}
+
+.App {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.col-sm-5,
+.col-sm-7 {
+  padding: 0px;
+}
+
+/*Navigation*/
+
+.city-input {
+  display: block;
+  width: 540px;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--secondary-color);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+  margin: 0px 10px;
+  position: relative;
+  left: 30px;
+}
+
+.seach-button {
+  background-color: var(--secondary-color);
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin: 0px 10px;
+}
+
+.seach-button:hover {
+  background-color: #d5d3d1;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.searchField {
+  padding: 0px;
+}
+
+/*City and Time*/
+
+.overview {
+  padding: 50px 0px 0px 10px;
+  position: relative;
+  left: 60px;
+}
+
+/*Actual Temperature*/
+
+.actual-temperature strong {
+  font-size: 90px;
+  position: relative;
+  left: 20px;
+}
+
+.actual-temperature {
+  padding: 10px 0px 0px 0px;
+}
+
+.units {
+  position: relative;
+  font-size: 12px;
+  bottom: 10px;
+  left: 40px;
+  color: var(--secondary-color);
+}
+
+.units a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/*Weather Description*/
+
+.weather-description {
+  position: relative;
+  left: 35px;
+}
+
+.weather-img {
+  padding: 10px 0px 0px 10px;
+  position: relative;
+  bottom: 5px;
+  width: 200px;
+  height: auto;
+  left: 30px;
+}
+
+.wind-humidity {
+  padding: 30px 0px 10px 0px;
+  margin: 10px;
+  color: var(--primary-color);
+  position: relative;
+  left: 20px;
+}
+
+.bottomlink {
+  padding-top: 5px;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: #7f867b;
+  font-size: 16px;
+}
+
+.bottomlink:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 576px) {
+  .weather-description img {
+    text-align: center;
+  }
+
+  .searchButton {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .city-input {
+    width: 300px;
+    position: relative;
+    left: 0px;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  .seach-button {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+
+  .col-sm-5,
+  .col-sm-7 {
+    padding: 0px;
+  }
+
+  .overview {
+    padding: 10px 15px;
+    position: relative;
+    left: 0px;
+  }
+
+  .weather-img {
+    width: 100px;
+    height: auto;
+    padding: 0px;
+    position: relative;
+    left: 0px;
+  }
+
+  .Weather {
+    padding: 10px 0px;
+    margin: 0px 10px;
+    text-align: center;
+  }
+
+  .wind-humidity {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: 0px;
+  }
+
+  .actual-temperature strong {
+    padding-left: 0px;
+  }
+
+  .bottomlink,
+  footer {
+    font-size: 10px;
+  }
+}
