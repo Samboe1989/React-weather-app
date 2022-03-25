@@ -10,7 +10,7 @@ function App() {
         <footer>
           This project was coded by Samantha Boersma and is
           <a
-            class="bottomlink"
+            className="bottomlink"
             href="https://github.com/Samboe1989/React-weather-app"
             target="_blank"
             rel="noreferrer"

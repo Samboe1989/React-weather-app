@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 import "./App.css";
@@ -14,6 +15,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       weatherCondition: response.data.weather[0].main,
       tempMin: response.data.main.temp_min,
@@ -62,7 +64,9 @@ export default function Weather(props) {
               <div className="overview">
                 <h1>{city}</h1>
                 <ul>
-                  <li>Last updated: Friday 19:32</li>
+                  <li>
+                    Last updated: <FormattedDate date={weather.date} />
+                  </li>
                 </ul>
               </div>
             </div>
@@ -125,7 +129,7 @@ export default function Weather(props) {
           <div className="row">
             <div className="col-sm-7">
               <div className="overview">
-                <h1>Barcelona</h1>
+                <h1>{props.city}</h1>
                 <ul>
                   <li>Last updated: Friday 19:32</li>
                 </ul>
