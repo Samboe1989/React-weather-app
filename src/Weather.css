@@ -175,8 +175,10 @@ li {
 }
 
 @media (max-width: 576px) {
-  .weather-description img {
+  .weather-description {
     text-align: center;
+    position: relative;
+    left: 0px;
   }
 
   .searchButton {
@@ -185,7 +187,7 @@ li {
   }
 
   .city-input {
-    width: 300px;
+    width: auto;
     position: relative;
     left: 0px;
     padding: 20px;
