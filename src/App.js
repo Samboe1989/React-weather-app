@@ -1,12 +1,11 @@
 import "./App.css";
-import "./Weather.css";
 import Weather from "./Weather";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather city="Barcelona" />
+        <Weather defaultCity="Barcelona" />
         <footer>
           This project was coded by Samantha Boersma and is
           <a
@@ -23,5 +22,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
