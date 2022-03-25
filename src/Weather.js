@@ -49,6 +49,7 @@ export default function Weather(props) {
                   placeholder="Type a city.."
                   autoComplete="off"
                   className="city-input"
+                  autoFocus="on"
                 />
               </div>
               <div className="col-sm-3 searchButton">
@@ -68,12 +69,12 @@ export default function Weather(props) {
               </div>
             </div>
             <div className="col-sm-5">
-              <div className="actual-temperature">
+              <span className="actual-temperature">
                 <strong>{Math.round(weather.temperature)}</strong>
                 <span className="units">
                   <a href="/">°C</a>|<a href="/">°F</a>
                 </span>
-              </div>
+              </span>
             </div>
           </div>
           <div className="row">
