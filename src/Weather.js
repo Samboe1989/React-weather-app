@@ -6,13 +6,11 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [city, setCity] = useState("");
-  const [loaded, setLoaded] = useState(false);
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState({ ready: false });
 
   function displayWeather(response) {
-    setLoaded(true);
-
     setWeather({
+      ready: true,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -36,7 +34,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  if (loaded) {
+  if (weather.ready) {
     return (
       <div>
         <div className="Weather">
@@ -89,7 +87,7 @@ export default function Weather(props) {
             </div>
             <div className="col-sm-5">
               <div className="wind-humidity">
-                <h2>{weather.description}</h2>
+                <h2 className="text-capitalize">{weather.description}</h2>
                 <ul>
                   <li>Humidity:{weather.humidity}%</li>
                   <li>Wind: {Math.round(weather.wind)} km/h</li>
