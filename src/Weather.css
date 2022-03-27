@@ -224,7 +224,8 @@ li {
 
   .Weather {
     padding: 50px 0px;
-    margin: 0px 10px;
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
     margin-bottom: 60px;
   }
