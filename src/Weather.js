@@ -19,7 +19,7 @@ export default function Weather(props) {
       tempMin: response.data.main.temp_min,
       tempMax: response.data.main.temp_max,
       city: response.data.name,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
