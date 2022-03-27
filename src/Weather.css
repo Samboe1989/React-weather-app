@@ -175,6 +175,10 @@ li {
 }
 
 @media (max-width: 576px) {
+  h1 {
+    padding-bottom: 5px;
+  }
+
   .weather-description {
     position: relative;
     left: 0px;
