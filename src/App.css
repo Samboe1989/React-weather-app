@@ -4,6 +4,12 @@
   --li-color: #4e5e43;
 }
 
+.App {
+  max-width: 800px;
+  width: 1200px;
+  margin: 30px auto;
+}
+
 footer {
   margin: 10px;
   font-size: 16px;
