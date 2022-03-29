@@ -6,6 +6,12 @@
   opacity: 0.6;
 }
 
-.WeatherForecast-icon {
-  width: 100px;
+.WeatherForecast canvas {
+  width: 40px;
+  position: relative;
+  bottom: 0px;
+  height: auto;
+  left: 0px;
+  top: 0px;
+  font-weight: lighter;
 }
