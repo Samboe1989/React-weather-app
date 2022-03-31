@@ -275,8 +275,12 @@ li {
     left: 0px;
   }
 
+  .unit,
   .actual-temperature strong {
     padding-left: 0px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
   }
 
   .bottomlink,
