@@ -26,6 +26,7 @@ h2 {
   color: var(--primary-color);
   position: relative;
   right: 5px;
+  padding: 0px 10px 0px 0px;
 }
 
 ul {
@@ -40,6 +41,7 @@ li {
   color: var(--li-color);
   font-size: 16px;
   line-height: 19px;
+  opacity: 0.6;
 }
 
 /*Containers*/
@@ -106,7 +108,7 @@ li {
 .overview {
   padding: 50px 0px 0px 10px;
   position: relative;
-  left: 40px;
+  left: 50px;
 }
 
 /*Actual Temperature*/
@@ -114,7 +116,8 @@ li {
 .actual-temperature strong {
   font-size: 90px;
   position: relative;
-  left: 20px;
+  left: 40px;
+  bottom: 10px;
 }
 
 .actual-temperature {
@@ -158,6 +161,11 @@ li {
   color: var(--primary-color);
   position: relative;
   left: 20px;
+}
+
+.wind,
+.humidity {
+  opacity: 0.6;
 }
 
 .bottomlink {
