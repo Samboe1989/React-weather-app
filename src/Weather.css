@@ -24,6 +24,8 @@ h1 {
 h2 {
   font-weight: bold;
   color: var(--primary-color);
+  position: relative;
+  right: 5px;
 }
 
 ul {
@@ -48,7 +50,7 @@ li {
 }
 
 .Weather {
-  padding: 30px 0px 0px 30px;
+  padding: 30px 0px 0px 0px;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   margin: 60px 0px 0px 0px;
@@ -77,7 +79,7 @@ li {
   background-clip: padding-box;
   border: 2px solid var(--secondary-color);
   border-radius: 3px;
-  margin: 0px 10px;
+  margin: 0px 0px 20px 20px;
   position: relative;
   left: 30px;
 }
@@ -104,7 +106,7 @@ li {
 .overview {
   padding: 50px 0px 0px 10px;
   position: relative;
-  left: 60px;
+  left: 40px;
 }
 
 /*Actual Temperature*/
@@ -172,9 +174,24 @@ li {
   transition: all 0.5s ease;
 }
 
+/*Forecast*/
+
+.WeatherForecast {
+  padding: 30px;
+}
+
+.Weather-forecast-container {
+  padding: 5px;
+}
+
 @media (max-width: 576px) {
   h1 {
     padding-bottom: 5px;
+  }
+
+  h2 {
+    position: relative;
+    right: 0px;
   }
 
   .container {
@@ -183,6 +200,7 @@ li {
   }
 
   .weather-description {
+    padding-bottom: 20px;
     position: relative;
     left: 0px;
   }
@@ -226,9 +244,9 @@ li {
   }
 
   .Weather {
-    padding: 50px 0px;
+    padding: 20px 0px;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
 
   .Weather canvas {
